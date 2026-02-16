@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeurLearn AI - The Future of Education</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: rgb(71, 71, 71);
+            color: white;
+            overflow-x: hidden;
+          
+        }
+        .glass-sidebar {
+            background: rgba(15, 7, 32, 0.8);
+            backdrop-filter: blur(15px);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .ai-gradient {
+            background: linear-gradient(135deg, #EADDD3 0%, #C4B6AB 50%, #9D8A7C 100%);
+        }
+        .card-bg {
+            background: #9c948869;
+            border: 1px solid rgb(131, 89, 89);
+            transition: all 0.3s ease;
+        }
+        .card-bg:hover {
+            border-color: #8c6e6388;
+            transform: translateY(-2px);
+        }
+        .pulse-ai {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(168, 85, 247, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(168, 85, 247, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(168, 85, 247, 0); }
+        }
+        .drop-zone {
+            border: 2px dashed #ff440075;
+            background: rgba(247, 177, 85, 0.055);
+        }
+        .drop-zone:hover {
+            border-color: #ce8526;
+            background: #ad9a8233;
+        }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0f0720; }
+        ::-webkit-scrollbar-thumb { background: #6e6d6e; border-radius: 10px; }
+        .button-menu{
+            padding: 8px 14px 10px 14px !important;
+            border-bottom-right-radius: 10px !important;
+            border-bottom-left-radius: 10px !important;
+            background-color: #af978194;
+          
+  
+    right:  0px !important;
+ top: 0;
+    z-index: 100 !important;
+    transition: all 0.5s ease;
+position: fixed !important;
+height: 98px;
+        }
+    </style>
+</head>
+<body class="flex min-h-screen">
+
+    <aside id="sidebar" class="w-64 glass-sidebar fixed left-0 h-full p-6 flex flex-col z-50" style="transition: all 0.5s ease;
+">
+                    <button id="toggleBtn" type="menu" class="button-menu"><</button>
+
+        <div class="flex items-center gap-3 mb-10">
+            <div class="w-10 h-10 ai-gradient rounded-xl flex items-center justify-center shadow-lg shadow-purple-500/30">
+                <i class="fas fa-brain text-white text-xl"></i>
+            </div>
+            <div>
+                <h1 class="font-extrabold text-xl tracking-tight">NeurLearn <span class="text-purple-400">AI</span></h1>
+                <p class="text-[10px] text-gray-400">Powered by Advanced AI</p>
+            </div>
+        </div>
+
+        <nav class="flex-1 space-y-2">
+            <a href="#" class="flex items-center gap-3 p-3 rounded-xl bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                <i class="fas fa-wand-magic-sparkles"></i>
+                <span class="font-semibold">Content Generation</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 p-3 rounded-xl hover:bg-white/5 text-gray-400 hover:text-white transition">
+                <i class="fas fa-layer-group"></i>
+                <span>Library</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 p-3 rounded-xl hover:bg-white/5 text-gray-400 hover:text-white transition">
+                <i class="fas fa-bolt"></i>
+                <span>Smart Training</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 p-3 rounded-xl hover:bg-white/5 text-gray-400 hover:text-white transition">
+                <i class="fas fa-chart-pie"></i>
+                <span>Statistics</span>
+            </a>
+            <a href="#" class="flex items-center gap-3 p-3 rounded-xl hover:bg-white/5 text-gray-400 hover:text-white transition">
+                <i class="fas fa-comment-dots"></i>
+                <span>AI Assistant</span>
+            </a>
+        </nav>
+
+        <div class="mt-auto pt-6 border-t border-white/10">
+            <button class="w-full ai-gradient p-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:opacity-90 transition text-black">
+                <i class="fas fa-plus"></i>
+                New Content
+            </button>
+        </div>
+    </aside>
+
+    <main id="mainContent" class="flex-1 ml-64 p-8" style="    transition: all 0.5s ease;
+">
+       
+
+        <section class="relative rounded-3xl overflow-hidden mb-10">
+            <div class="absolute inset-0 bg-gradient-to-r from-purple-900/40 to-transparent z-0"></div>
+            <div class="relative z-10 p-10 flex flex-col md:flex-row justify-between items-center gap-8 card-bg border-none shadow-2xl">
+                <div class="max-w-xl">
+                    <div class="flex items-center gap-2 text-yellow-400 mb-4">
+                        <span class="uppercase tracking-widest text-sm font-bold">AI Content Generator</span>
+                    </div>
+                    <h2 class="text-4xl font-extrabold mb-4 leading-tight">Transform any content into a <span class=" text-[#D3A376]">Smart Learning Experience</span></h2>
+                    <p class="text-gray-400 text-lg">Upload your study files, let AI analyze the depth and design a personalized learning journey for you (flashcards, summaries, or exercises).</p>
+                </div>
+                <div class="w-48 h-48 ai-gradient rounded-full blur-[80px] absolute -right-10 opacity-20"></div>
+            </div>
+        </section>
+
+        <div class="flex flex-col gap-10 ">
+            <div class="lg:col-span-2 space-y-6">
+                <div class="card-bg rounded-3xl p-8  bg-gradient-to-r from-purple-500/10 to-transparent z-0">
+                    <h3 class="text-xl font-bold mb-6 flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-lg bg-yellow-500/20 text-white-400 flex items-center justify-center text-sm">1</span>
+                        Upload Content or Paste Text
+                    </h3>
+                    
+                    <div class="flex gap-4 mb-6 p-1 bg-white/5 rounded-2xl">
+                        <button id="pdfTab" onclick="switchTab('pdf')" class="flex-1 py-3 rounded-xl bg-white/10 shadow-lg transition font-bold">Upload PDF</button>
+                        <button id="textTab" onclick="switchTab('text')" class="flex-1 py-3 rounded-xl text-gray-400 hover:text-white transition font-bold">Paste Text</button>
+                    </div>
+
+                    <div id="pdfZone" class="drop-zone rounded-3xl p-12 text-center transition cursor-pointer mb-6 group relative">
+                     
+                            <input type="file" id="fileInput" class="absolute inset-0 opacity-0 cursor-pointer z-10 w-full" accept=".pdf,.docx,.txt" onchange="handleFileSelect(this)">
+                       
+                        <div class="w-20 h-20 bg-yellow-500/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition duration-300">
+                            <i class="fas fa-cloud-arrow-up text-3xl text-white-400"></i>
+                        </div>
+                        <h4 class="text-lg font-bold mb-2">Drag and drop your file here</h4>
+                        <p class="text-sm text-gray-400">Supports PDF, DOCX, TXT up to 50MB</p>
+                    </div>
+
+                    <div id="textZone" class="hidden mb-6">
+                        <textarea class="w-full h-48 bg-white/5 border border-white/10 rounded-3xl p-6  focus:outline-none transition resize-none" placeholder="Paste your educational content here..."></textarea>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex items-center gap-4">
+                            <i class="fas fa-language text-yellow-500"></i>
+                            <select style="color: rgb(46, 46, 46);" class="bg-transparent  w-full focus:outline-none">
+                                <option>Auto Detect Language</option>
+                                <option>Arabic</option>
+                                <option>English</option>
+                                <option>French</option>
+                            </select>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-white/5 border border-white/5 flex items-center gap-4">
+                            <i class="fas fa-graduation-cap text-yellow-400"></i>
+                            <select style="color: rgb(46, 46, 46);" class="bg-transparent  w-full focus:outline-none">
+                                <option>University Level</option>
+                                <option>High School Level</option>
+                                <option>Intermediate</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="card-bg rounded-3xl p-8  bg-gradient-to-r from-purple-500/10 to-transparent z-0">
+                    <h3 class="text-xl font-bold mb-6 flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-lg bg-yellow-500/20 text-white-400 flex items-center justify-center text-sm">2</span>
+                        What do you want to create?
+                    </h3>
+                    
+                    <div class="space-y-3">
+                        <label class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/5 cursor-pointer hover:border-red-500/50 transition">
+                            <input type="radio" name="mode" class="w-5 h-5 accent-purple-500" checked>
+                            <div class="flex-1">
+                                <p class="font-bold">Flashcards (Active Recall)</p>
+                                <p class="text-[10px] text-gray-400">Smart Q&A for memorization</p>
+                            </div>
+                        </label>
+
+                        <label class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/5 cursor-pointer hover:border-blue-500/50 transition">
+                            <input type="radio" name="mode" class="w-5 h-5 accent-blue-500">
+                            <div class="flex-1">
+                                <p class="font-bold">Executive Summary (Summarizer)</p>
+                                <p class="text-[10px] text-gray-400">Key points in a capsule</p>
+                            </div>
+                        </label>
+
+                        <label class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/5 cursor-pointer hover:border-pink-500/50 transition">
+                            <input type="radio" name="mode" class="w-5 h-5 accent-pink-500">
+                            <div class="flex-1">
+                                <p class="font-bold">Essays & Philosophical Analysis</p>
+                                <p class="text-[10px] text-gray-400">Thesis, Antithesis, Synthesis</p>
+                            </div>
+                        </label>
+
+                        <label class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/5 cursor-pointer hover:border-green-500/50 transition">
+                            <input type="radio" name="mode" class="w-5 h-5 accent-green-500">
+                            <div class="flex-1">
+                                <p class="font-bold">Math Exercises & Series</p>
+                                <p class="text-[10px] text-gray-400">Problem generation with solutions</p>
+                            </div>
+                        </label>
+
+                        <label class="flex items-center gap-4 p-4 rounded-2xl bg-white/5 border border-white/5 cursor-pointer hover:border-yellow-500/50 transition">
+                            <input type="radio" name="mode" class="w-5 h-5 accent-yellow-500">
+                            <div class="flex-1">
+                                <p class="font-bold">Full Exam Simulation</p>
+                                <p class="text-[10px] text-gray-400">MCQ and Essay questions with timer</p>
+                            </div>
+                        </label>
+                    </div>
+
+                    <button class="w-full mt-8 pulse-ai ai-gradient py-4 rounded-2xl font-black text-lg shadow-xl shadow-purple-600/20">
+                        Start Smart Processing
+                        <i class="fas fa-wand-magic-sparkles ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <section class="mt-12">
+            <h3 class="text-2xl font-bold mb-8">Exclusive Advanced Features for You</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="card-bg p-6 rounded-3xl border-l-4 border-purple-500">
+                    <div class="w-12 h-12 bg-purple-500/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-diagram-project text-purple-400 text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Automatic Mind Maps</h4>
+                    <p class="text-sm text-gray-400">Build a visual structure of complex information for easier visual understanding.</p>
+                </div>
+                <div class="card-bg p-6 rounded-3xl border-l-4 border-cyan-500">
+                    <div class="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-microphone-lines text-cyan-400 text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Convert to Podcast</h4>
+                    <p class="text-sm text-gray-400">Listen to your lessons on the go with a highly human-like AI voice.</p>
+                </div>
+                <div class="card-bg p-6 rounded-3xl border-l-4 border-pink-500">
+                    <div class="w-12 h-12 bg-pink-500/10 rounded-xl flex items-center justify-center mb-4">
+                        <i class="fas fa-brain text-pink-400 text-xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Spaced Repetition</h4>
+                    <p class="text-sm text-gray-400">Smart review scheduling that ensures information stays in your memory forever.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function switchTab(type) {
+            const pdfTab = document.getElementById('pdfTab');
+            const textTab = document.getElementById('textTab');
+            const pdfZone = document.getElementById('pdfZone');
+            const textZone = document.getElementById('textZone');
+
+            if (type === 'pdf') {
+                pdfTab.className = "flex-1 py-3 rounded-xl bg-white/10 shadow-lg transition font-bold";
+                textTab.className = "flex-1 py-3 rounded-xl text-gray-400 hover:text-white transition font-bold";
+                pdfZone.classList.remove('hidden');
+                textZone.classList.add('hidden');
+            } else {
+                textTab.className = "flex-1 py-3 rounded-xl bg-white/10 shadow-lg transition font-bold";
+                pdfTab.className = "flex-1 py-3 rounded-xl text-gray-400 hover:text-white transition font-bold";
+                textZone.classList.remove('hidden');
+                pdfZone.classList.add('hidden');
+            }
+        }
+        const btn = document.getElementById('toggleBtn');
+        const sidebar = document.getElementById('sidebar');
+        const main = document.getElementById('mainContent');
+        let isopen = true;
+        btn.addEventListener('click',function(){
+            if(isopen){
+        sidebar.style.transform = 'translateX(-100%)';
+        main.style.marginLeft = "0";
+        btn.style.left = "250px";
+        btn.style.top = "110px"
+        btn.style.borderTopLeftRadius ="10px"
+        btn.style.borderTopRightRadius ="10px"
+        btn.innerHTML = ">";
+        isopen = false;
+}
+else {
+    sidebar.style.transform = 'translateX(0)';
+        main.style.marginLeft = "16rem"; 
+        btn.style.left = ""; 
+        btn.style.top = "";
+        btn.innerHTML = '<'; 
+        btn.style.position = "";
+         btn.style.borderTopLeftRadius ="";
+        btn.style.borderTopRightRadius ="";
+        isopen = true;
+
+}
+        });
+
+    </script>
+</body>
+</html>
